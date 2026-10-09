@@ -72,64 +72,118 @@ fun HomeScreen(
     }
 
     Scaffold(
-        snackbarHost = { SnackbarHost(snackbar) },
+        snackbarHost = { SnackbarHost(hostState = snackbar) },
         floatingActionButton = {
-            FloatingActionButton(onClick = onAddTransaction, containerColor = MaterialTheme.colorScheme.primary) {
-                Text("+", color = MaterialTheme.colorScheme.onPrimary, style = MaterialTheme.typography.titleLarge)
+            FloatingActionButton(
+                onClick = onAddTransaction,
+                containerColor = MaterialTheme.colorScheme.primary,
+            ) {
+                Text(
+                    text = "+",
+                    color = MaterialTheme.colorScheme.onPrimary,
+                    style = MaterialTheme.typography.titleLarge,
+                )
             }
         },
     ) { padding ->
         LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(padding).padding(horizontal = 20.dp),
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
+                .padding(horizontal = 20.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             item {
-                Spacer(Modifier.height(8.dp))
-                Row(Modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                Spacer(modifier = Modifier.height(8.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
                     Column(modifier = Modifier.weight(1f)) {
-                        Text("PayLedger", style = MaterialTheme.typography.headlineMedium, color = MaterialTheme.colorScheme.primary)
                         Text(
-                            if (monitoringEnabled) stringResource(R.string.monitoring_on) else stringResource(R.string.monitoring_off),
+                            text = "PayLedger",
+                            style = MaterialTheme.typography.headlineMedium,
+                            color = MaterialTheme.colorScheme.primary,
+                        )
+                        Text(
+                            text = if (monitoringEnabled) {
+                                stringResource(R.string.monitoring_on)
+                            } else {
+                                stringResource(R.string.monitoring_off)
+                            },
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
                     IconButton(onClick = onOpenSettings) {
-                        Icon(Icons.Outlined.Settings, contentDescription = stringResource(R.string.settings_title))
+                        Icon(
+                            imageVector = Icons.Outlined.Settings,
+                            contentDescription = stringResource(R.string.settings_title),
+                        )
                     }
                 }
             }
             item {
                 val s = summary
                 if (s != null) {
-                    Row(horizontalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.fillMaxWidth()) {
-                        SummaryCard(stringResource(R.string.today_received), "Rs ${Format.pkr(s.today_total)}", Modifier.weight(1f))
-                        SummaryCard(stringResource(R.string.week_received), "Rs ${Format.pkr(s.week_total)}", Modifier.weight(1f))
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        SummaryCard(
+                            title = stringResource(R.string.today_received),
+                            value = "Rs ${Format.pkr(s.today_total)}",
+                            cardModifier = Modifier.weight(1f),
+                        )
+                        SummaryCard(
+                            title = stringResource(R.string.week_received),
+                            value = "Rs ${Format.pkr(s.week_total)}",
+                            cardModifier = Modifier.weight(1f),
+                        )
                     }
-                    Spacer(Modifier.height(10.dp))
-                    Row(horizontalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.fillMaxWidth()) {
-                        SummaryCard(stringResource(R.string.month_received), "Rs ${Format.pkr(s.month_total)}", Modifier.weight(1f))
-                        SummaryCard(stringResource(R.string.transaction_count), s.transaction_count.toString(), Modifier.weight(1f))
+                    Spacer(modifier = Modifier.height(10.dp))
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        SummaryCard(
+                            title = stringResource(R.string.month_received),
+                            value = "Rs ${Format.pkr(s.month_total)}",
+                            cardModifier = Modifier.weight(1f),
+                        )
+                        SummaryCard(
+                            title = stringResource(R.string.transaction_count),
+                            value = s.transaction_count.toString(),
+                            cardModifier = Modifier.weight(1f),
+                        )
                     }
                 } else if (error != null) {
-                    Text(error ?: "", color = MaterialTheme.colorScheme.error)
+                    Text(text = error ?: "", color = MaterialTheme.colorScheme.error)
                 } else {
-                    Text("Loading…")
+                    Text(text = "Loading…")
                 }
             }
             item {
-                Text(stringResource(R.string.provider_breakdown), style = MaterialTheme.typography.titleMedium)
+                Text(
+                    text = stringResource(R.string.provider_breakdown),
+                    style = MaterialTheme.typography.titleMedium,
+                )
                 summary?.by_provider?.forEach { p ->
-                    Text("${Format.providerLabel(p.provider)}: Rs ${Format.pkr(p.total)} (${p.count})")
+                    Text(text = "${Format.providerLabel(p.provider)}: Rs ${Format.pkr(p.total)} (${p.count})")
                 }
             }
             item {
-                Text(stringResource(R.string.latest_transactions), style = MaterialTheme.typography.titleMedium)
+                Text(
+                    text = stringResource(R.string.latest_transactions),
+                    style = MaterialTheme.typography.titleMedium,
+                )
             }
-            items(summary?.recent.orEmpty(), key = { it.id }) { tx ->
-                TransactionRow(tx) { onOpenTransaction(tx.id) }
+            items(items = summary?.recent.orEmpty(), key = { it.id }) { tx ->
+                TransactionRow(tx = tx, onClick = { onOpenTransaction(tx.id) })
             }
-            item { Spacer(Modifier.height(72.dp)) }
+            item {
+                Spacer(modifier = Modifier.height(72.dp))
+            }
         }
     }
 }

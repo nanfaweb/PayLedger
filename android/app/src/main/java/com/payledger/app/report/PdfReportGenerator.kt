@@ -60,6 +60,16 @@ class PdfReportGenerator(private val context: Context) {
         var y = margin
 
         fun xStart(): Float = if (rtl) pageWidth - margin else margin
+
+        fun drawTableHeader() {
+            canvas.drawText("Date", margin, y, headerPaint)
+            canvas.drawText("Sender", margin + 110, y, headerPaint)
+            canvas.drawText("Provider", margin + 260, y, headerPaint)
+            canvas.drawText("Amount", margin + 360, y, headerPaint)
+            canvas.drawText("Ref", margin + 450, y, headerPaint)
+            y += lineHeight
+        }
+
         fun newPage() {
             doc.finishPage(pageInfo)
             pageNumber++
@@ -73,15 +83,6 @@ class PdfReportGenerator(private val context: Context) {
 
         fun ensureSpace(needed: Float) {
             if (y + needed > pageHeight - margin) newPage()
-        }
-
-        fun drawTableHeader() {
-            canvas.drawText("Date", if (rtl) xStart() - 0 else margin, y, headerPaint)
-            canvas.drawText("Sender", margin + 110, y, headerPaint)
-            canvas.drawText("Provider", margin + 260, y, headerPaint)
-            canvas.drawText("Amount", margin + 360, y, headerPaint)
-            canvas.drawText("Ref", margin + 450, y, headerPaint)
-            y += lineHeight
         }
 
         canvas.drawText("PayLedger", xStart(), y, titlePaint)

@@ -2,12 +2,15 @@ package com.payledger.app.data.remote
 
 import com.payledger.app.BuildConfig
 import com.payledger.app.data.local.TokenStore
+import com.payledger.app.data.model.AuthResponse
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.Authenticator
 import okhttp3.Interceptor
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.Response
 import okhttp3.Route
 import okhttp3.logging.HttpLoggingInterceptor
@@ -23,10 +26,8 @@ class TokenAuthenticator(
     override fun authenticate(route: Route?, response: Response): Request? {
         if (responseCount(response) >= 2) return null
         val refresh = tokenStore.refreshToken ?: return null
-        val body = okhttp3.RequestBody.create(
-            okhttp3.MediaType.parse("application/json"),
-            """{"refresh_token":"$refresh"}"""
-        )
+        val body = """{"refresh_token":"$refresh"}"""
+            .toRequestBody("application/json".toMediaType())
         val refreshRequest = Request.Builder()
             .url(BuildConfig.API_BASE_URL + "auth/refresh")
             .post(body)
@@ -36,8 +37,8 @@ class TokenAuthenticator(
             tokenStore.clearSession()
             return null
         }
-        val json = refreshResponse.body()?.string().orEmpty()
-        val adapter = moshi.adapter(com.payledger.app.data.model.AuthResponse::class.java)
+        val json = refreshResponse.body?.string().orEmpty()
+        val adapter = moshi.adapter(AuthResponse::class.java)
         val auth = adapter.fromJson(json) ?: return null
         tokenStore.saveSession(
             auth.access_token,
