@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PayLedger</string>
+    <string name="notification_listener_label">PayLedger payment monitor</string>
+
+    <string name="welcome_title">PayLedger</string>
+    <string name="welcome_subtitle">Organize JazzCash, Easypaisa, SadaPay, and NayaPay payments in one simple ledger.</string>
+    <string name="get_started">Get started</string>
+    <string name="already_have_account">I already have an account</string>
+
+    <string name="login">Log in</string>
+    <string name="register">Create account</string>
+    <string name="logout">Log out</string>
+    <string name="full_name">Full name</string>
+    <string name="phone_number">Mobile number</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="reset_password">Reset password</string>
+    <string name="reset_token">Reset token</string>
+    <string name="new_password">New password</string>
+    <string name="phone_hint">03XXXXXXXXX</string>
+
+    <string name="activate_title">Activate PayLedger</string>
+    <string name="activate_subtitle">Enter the activation code provided by your developer to unlock PayLedger for one year.</string>
+    <string name="activation_code">Activation code</string>
+    <string name="activate">Activate</string>
+    <string name="renew_title">Renew your subscription</string>
+    <string name="renew_subtitle">Your access has expired. Enter a new activation code to continue.</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_transactions">Transactions</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_settings">Settings</string>
+
+    <string name="today_received">Today</string>
+    <string name="week_received">This week</string>
+    <string name="month_received">This month</string>
+    <string name="transaction_count">Transactions</string>
+    <string name="latest_transactions">Latest transactions</string>
+    <string name="provider_breakdown">By provider</string>
+    <string name="add_transaction">Add transaction</string>
+    <string name="unknown_sender">Unknown sender</string>
+    <string name="incoming">Incoming</string>
+    <string name="outgoing">Outgoing</string>
+    <string name="monitoring_on">Monitoring on</string>
+    <string name="monitoring_off">Monitoring off</string>
+    <string name="amount_pkr">Rs %1$s</string>
+
+    <string name="search_hint">Search sender, phone, or reference</string>
+    <string name="filters">Filters</string>
+    <string name="apply_filters">Apply</string>
+    <string name="clear_filters">Clear</string>
+    <string name="no_transactions">No transactions yet</string>
+    <string name="no_matches">No matching transactions</string>
+    <string name="transaction_details">Transaction details</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="notes">Notes</string>
+    <string name="sender_name">Sender name</string>
+    <string name="reference">Reference</string>
+    <string name="original_notification">Original notification</string>
+    <string name="needs_review">Needs review</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="manual">Manual</string>
+
+    <string name="reports_title">Reports</string>
+    <string name="generate_pdf">Generate PDF</string>
+    <string name="preview_share">Preview &amp; share</string>
+    <string name="period_today">Today</string>
+    <string name="period_yesterday">Yesterday</string>
+    <string name="period_this_week">This week</string>
+    <string name="period_last_week">Last week</string>
+    <string name="period_this_month">This month</string>
+    <string name="period_last_month">Last month</string>
+    <string name="period_custom">Custom range</string>
+    <string name="all_providers">All providers</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="language">Language</string>
+    <string name="language_english">English</string>
+    <string name="language_urdu">Urdu</string>
+    <string name="notification_access">Notification access</string>
+    <string name="notification_access_required">PayLedger needs notification access to read payment alerts from JazzCash, Easypaisa, SadaPay, and NayaPay. Only those apps are processed. Historical wallet history is not imported.</string>
+    <string name="open_notification_settings">Open notification settings</string>
+    <string name="payment_providers">Payment providers</string>
+    <string name="last_notification_status">Last notification</string>
+    <string name="subscription">Subscription</string>
+    <string name="activated_on">Activated</string>
+    <string name="expires_on">Expires</string>
+    <string name="days_remaining">Days remaining: %1$d</string>
+    <string name="privacy">Privacy</string>
+    <string name="delete_account">Delete account</string>
+    <string name="delete_account_confirm">This permanently deletes your account, transactions, and license data from PayLedger servers. This cannot be undone.</string>
+    <string name="confirm_delete">Delete permanently</string>
+
+    <string name="expiry_reminder_30">Your PayLedger subscription expires in about 30 days.</string>
+    <string name="expiry_reminder_7">Your PayLedger subscription expires in about 7 days.</string>
+    <string name="expiry_reminder_1">Your PayLedger subscription expires tomorrow.</string>
+
+    <string name="payment_recorded">Payment recorded</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_network">Could not reach the server.</string>
+    <string name="disclaimer_source">Source: device notification. Not bank proof.</string>
+
+    <string name="provider_jazzcash">JazzCash</string>
+    <string name="provider_easypaisa">Easypaisa</string>
+    <string name="provider_sadapay">SadaPay</string>
+    <string name="provider_nayapay">NayaPay</string>
+    <string name="provider_other">Other</string>
+</resources>

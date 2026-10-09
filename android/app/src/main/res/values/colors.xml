@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pl_green_dark">#1B5E3B</color>
+    <color name="pl_green">#2E7D4F</color>
+    <color name="pl_green_soft">#E8F5EE</color>
+    <color name="pl_green_success">#43A06A</color>
+    <color name="pl_background">#FAFCFA</color>
+    <color name="pl_surface">#FFFFFF</color>
+    <color name="pl_on_primary">#FFFFFF</color>
+    <color name="pl_text">#1A2E22</color>
+    <color name="pl_muted">#5C6B62</color>
+    <color name="pl_error">#B3261E</color>
+    <color name="ic_launcher_background">#1B5E3B</color>
+</resources>

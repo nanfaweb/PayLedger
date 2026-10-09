@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">پے لیجر</string>
+    <string name="notification_listener_label">پے لیجر ادائیگی مانیٹر</string>
+
+    <string name="welcome_title">پے لیجر</string>
+    <string name="welcome_subtitle">JazzCash، Easypaisa، SadaPay اور NayaPay کی ادائیگیوں کو ایک سادہ کھاتے میں منظم کریں۔</string>
+    <string name="get_started">شروع کریں</string>
+    <string name="already_have_account">میرا اکاؤنٹ پہلے سے ہے</string>
+
+    <string name="login">لاگ اِن</string>
+    <string name="register">اکاؤنٹ بنائیں</string>
+    <string name="logout">لاگ آؤٹ</string>
+    <string name="full_name">پورا نام</string>
+    <string name="phone_number">موبائل نمبر</string>
+    <string name="password">پاس ورڈ</string>
+    <string name="confirm_password">پاس ورڈ دوبارہ لکھیں</string>
+    <string name="forgot_password">پاس ورڈ بھول گئے؟</string>
+    <string name="reset_password">پاس ورڈ تبدیل کریں</string>
+    <string name="reset_token">ری سیٹ کوڈ</string>
+    <string name="new_password">نیا پاس ورڈ</string>
+    <string name="phone_hint">03XXXXXXXXX</string>
+
+    <string name="activate_title">پے لیجر فعال کریں</string>
+    <string name="activate_subtitle">ڈویلپر سے ملنے والا ایکٹیویشن کوڈ درج کریں تاکہ ایک سال کے لیے پے لیجر کھل جائے۔</string>
+    <string name="activation_code">ایکٹیویشن کوڈ</string>
+    <string name="activate">فعال کریں</string>
+    <string name="renew_title">سبسکرپشن تجدید کریں</string>
+    <string name="renew_subtitle">آپ کی رسائی ختم ہو چکی ہے۔ جاری رکھنے کے لیے نیا ایکٹیویشن کوڈ درج کریں۔</string>
+
+    <string name="nav_home">ہوم</string>
+    <string name="nav_transactions">لین دین</string>
+    <string name="nav_reports">رپورٹس</string>
+    <string name="nav_settings">ترتیبات</string>
+
+    <string name="today_received">آج</string>
+    <string name="week_received">اس ہفتے</string>
+    <string name="month_received">اس مہینے</string>
+    <string name="transaction_count">لین دین</string>
+    <string name="latest_transactions">تازہ ترین لین دین</string>
+    <string name="provider_breakdown">فراہم کنندہ کے مطابق</string>
+    <string name="add_transaction">لین دین شامل کریں</string>
+    <string name="unknown_sender">نامعلوم بھیجنے والا</string>
+    <string name="incoming">آنے والی</string>
+    <string name="outgoing">جانے والی</string>
+    <string name="monitoring_on">مانیٹرنگ آن</string>
+    <string name="monitoring_off">مانیٹرنگ آف</string>
+    <string name="amount_pkr">روپے %1$s</string>
+
+    <string name="search_hint">نام، فون یا حوالہ تلاش کریں</string>
+    <string name="filters">فلٹرز</string>
+    <string name="apply_filters">لاگو کریں</string>
+    <string name="clear_filters">صاف کریں</string>
+    <string name="no_transactions">ابھی کوئی لین دین نہیں</string>
+    <string name="no_matches">کوئی مماثل لین دین نہیں ملا</string>
+    <string name="transaction_details">تفصیلات</string>
+    <string name="edit">ترمیم</string>
+    <string name="delete">حذف</string>
+    <string name="save">محفوظ کریں</string>
+    <string name="cancel">منسوخ</string>
+    <string name="notes">نوٹس</string>
+    <string name="sender_name">بھیجنے والے کا نام</string>
+    <string name="reference">حوالہ نمبر</string>
+    <string name="original_notification">اصل نوٹیفکیشن</string>
+    <string name="needs_review">جائزہ درکار</string>
+    <string name="confirmed">تصدیق شدہ</string>
+    <string name="manual">دستی</string>
+
+    <string name="reports_title">رپورٹس</string>
+    <string name="generate_pdf">PDF بنائیں</string>
+    <string name="preview_share">پیش نظارہ اور شیئر</string>
+    <string name="period_today">آج</string>
+    <string name="period_yesterday">کل</string>
+    <string name="period_this_week">اس ہفتے</string>
+    <string name="period_last_week">گزشتہ ہفتہ</string>
+    <string name="period_this_month">اس مہینے</string>
+    <string name="period_last_month">گزشتہ مہینہ</string>
+    <string name="period_custom">مخصوص مدت</string>
+    <string name="all_providers">تمام فراہم کنندگان</string>
+
+    <string name="settings_title">ترتیبات</string>
+    <string name="profile">پروفائل</string>
+    <string name="language">زبان</string>
+    <string name="language_english">انگریزی</string>
+    <string name="language_urdu">اردو</string>
+    <string name="notification_access">نوٹیفکیشن رسائی</string>
+    <string name="notification_access_required">پے لیجر کو JazzCash، Easypaisa، SadaPay اور NayaPay کی ادائیگی الرٹس پڑھنے کے لیے نوٹیفکیشن رسائی درکار ہے۔ صرف ان ایپس پر کارروائی ہوتی ہے۔ پرانی والیٹ ہسٹری درآمد نہیں کی جاتی۔</string>
+    <string name="open_notification_settings">نوٹیفکیشن سیٹنگز کھولیں</string>
+    <string name="payment_providers">ادائیگی فراہم کنندگان</string>
+    <string name="last_notification_status">آخری نوٹیفکیشن</string>
+    <string name="subscription">سبسکرپشن</string>
+    <string name="activated_on">فعال ہونے کی تاریخ</string>
+    <string name="expires_on">ختم ہونے کی تاریخ</string>
+    <string name="days_remaining">باقی دن: %1$d</string>
+    <string name="privacy">پرائیویسی</string>
+    <string name="delete_account">اکاؤنٹ حذف کریں</string>
+    <string name="delete_account_confirm">اس سے آپ کا اکاؤنٹ، لین دین اور لائسنس ڈیٹا مستقل طور پر حذف ہو جائے گا۔ یہ عمل واپس نہیں ہو سکتا۔</string>
+    <string name="confirm_delete">مستقل حذف کریں</string>
+
+    <string name="expiry_reminder_30">آپ کی پے لیجر سبسکرپشن تقریباً ۳۰ دن میں ختم ہو گی۔</string>
+    <string name="expiry_reminder_7">آپ کی پے لیجر سبسکرپشن تقریباً ۷ دن میں ختم ہو گی۔</string>
+    <string name="expiry_reminder_1">آپ کی پے لیجر سبسکرپشن کل ختم ہو گی۔</string>
+
+    <string name="payment_recorded">ادائیگی محفوظ ہو گئی</string>
+    <string name="error_generic">کچھ غلط ہو گیا۔ دوبارہ کوشش کریں۔</string>
+    <string name="error_network">سرور سے رابطہ نہیں ہو سکا۔</string>
+    <string name="disclaimer_source">ماخذ: ڈیوائس نوٹیفکیشن۔ بینک ثبوت نہیں۔</string>
+
+    <string name="provider_jazzcash">JazzCash</string>
+    <string name="provider_easypaisa">Easypaisa</string>
+    <string name="provider_sadapay">SadaPay</string>
+    <string name="provider_nayapay">NayaPay</string>
+    <string name="provider_other">دیگر</string>
+</resources>

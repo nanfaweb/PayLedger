@@ -1,0 +1,5 @@
+-keepattributes Signature
+-keepclassmembers class com.payledger.app.data.remote.** { *; }
+-dontwarn okhttp3.**
+-dontwarn retrofit2.**
+-dontwarn com.squareup.moshi.**
