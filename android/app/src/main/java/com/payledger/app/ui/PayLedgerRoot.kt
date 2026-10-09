@@ -158,13 +158,14 @@ fun PayLedgerRoot(container: AppContainer) {
             }
         }
         composable(Routes.MAIN) {
-            MainShell(container = container, onLoggedOut = {
-                navController.navigate(Routes.LOGIN) {
-                    popUpTo(0) { inclusive = true }
-                }
-            }, onRenew = {
-                navController.navigate(Routes.RENEW)
-            })
+            MainShell(
+                container = container,
+                onLoggedOut = {
+                    navController.navigate(Routes.LOGIN) {
+                        popUpTo(0) { inclusive = true }
+                    }
+                },
+            )
         }
     }
 }
@@ -173,7 +174,6 @@ fun PayLedgerRoot(container: AppContainer) {
 private fun MainShell(
     container: AppContainer,
     onLoggedOut: () -> Unit,
-    onRenew: () -> Unit,
 ) {
     val navController = rememberNavController()
     val backStack by navController.currentBackStackEntryAsState()
