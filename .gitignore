@@ -1,0 +1,46 @@
+# Environment and secrets
+.env
+.env.local
+*.pem
+*.p12
+*.jks
+*.keystore
+admin/exports/
+admin/codes*.csv
+**/activation-codes*.csv
+
+# Node
+node_modules/
+npm-debug.log*
+coverage/
+.nyc_output/
+dist/
+build/
+backend/dist/
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+android/*.iml
+android/captures/
+android/.cxx/
+android/app/release/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+*.log
+
+# Test artifacts
+tmp/
+temp/

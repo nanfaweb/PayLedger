@@ -1,0 +1,15 @@
+{
+  "name": "payledger",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PayLedger — payment notification ledger for Pakistani merchants",
+  "scripts": {
+    "backend:install": "npm install --prefix backend",
+    "admin:install": "npm install --prefix admin",
+    "migrate": "npm run migrate --prefix backend",
+    "backend": "npm start --prefix backend",
+    "backend:dev": "npm run dev --prefix backend",
+    "backend:test": "npm test --prefix backend",
+    "admin": "node admin/cli.js"
+  }
+}
